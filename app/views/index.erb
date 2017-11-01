@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blogs</title>
+  </head>
+  <body>
+    <h1>Welcome to Blog Posts</h1>
+      <% @posts.each do |post| %>
+        <a href="/posts/<%=post.id %>"><%= post.name %></a><br>
+        <p><%= post.content %></p>
+      <% end %>
+      <a href="/posts/new">Create New Blog Post</a>
+  </body>
+</html>
